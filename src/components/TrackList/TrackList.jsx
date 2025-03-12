@@ -1,6 +1,6 @@
 const TrackList = (props) => {
     // Let's ensure we have data to work with before adding functionality!
-    console.log(props);
+    // console.log(props);
   
     return (
         <div>
@@ -11,7 +11,13 @@ const TrackList = (props) => {
         ) : (
             <ul>
               {props.tracks.map((track) => (
-                <li key={track._id}>{track.title}</li>
+                <li 
+                key={track._id}
+                style={{ cursor: "pointer"}}
+                onClick={() => props.handleSelect(track)}
+                >
+                    {track.title}
+                    </li>
               ))}
             </ul>
         )}
