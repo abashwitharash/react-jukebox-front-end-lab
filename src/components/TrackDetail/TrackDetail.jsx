@@ -20,6 +20,9 @@ const TrackDetail = (props) => {
         <button onClick={() => props.handleDeleteTrack(props.selected._id)}>
         Delete Track
       </button>
+      <button onClick={() => props.handleNowPlayingTrack(props.selected)}>
+       Play Track
+      </button>
       </div>
       </div>
       
